@@ -3,12 +3,12 @@
 
 <head>
 
-    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>
         Product Landing Page
     </title>
@@ -16,6 +16,480 @@
 </head>
 
 <body>
+
+    <nav id="navbar">
+        <header class="head">HTML Documentation</header>
+
+        <a class="nav-link" href="#Getting_started_with_HTML">Getting started with HTML<br></a>
+        <a class="nav-link" href="#What_is_HTML">What is HTML<br></a>
+        <a class="nav-link" href="#Anatomy_of_HTML_element">Anatomy of HTML element<br></a>
+        <a class="nav-link" href="#Attributes">Attributes<br></a>
+        <a class="nav-link" href="#Anatomy_of_HTML_document">Anatomy of HTML document<br></a>
+        <a class="nav-link" href="#Including_special_characters_in_HTML">Including special characters in HTML<br></a>
+        <a class="nav-link" href="#HTML_comments">HTML comments<br></a>
+        <a class="nav-link" href="#Summary">Summary<br></a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Getting_started_with_HTML">
+            <header id="heading">Getting started with HTML</header>
+            <p>In this article we cover the absolute basics of HTML. To get you started, this article defines elements,
+                attributes,
+                and all the other important terms you may have heard. It also explains where these fit into HTML.
+                You will learn how HTML elements are structured, how a typical HTML page is structured, and other
+                important basic
+                language features. Along the way, there will be an opportunity to play with HTML too!</p>
+
+            <table class="table1">
+                <tbody>
+                    <tr>
+                        <th scope="row">Prerequisites:</th>
+                        <td>Basic computer literacy,
+                            <!--<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">-->basic
+                            software installed
+                            <!--</a>-->
+                            and basic knowledge of
+                            <!--<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">-->working
+                            with files.
+                            <!--</a>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Objective:</th>
+                        <td>To gain basic familiarity with HTML, and practice writing a few HTML elements.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="main-section" id="What_is_HTML">
+            <header id="heading">What is HTML</header>
+            <p>HTML (Hypertext Markup Language) is not a programming language. It is a <em>markup language</em> that
+                tells web
+                browsers how to structure the web pages you visit. It can be as complicated or as simple as the web
+                developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark
+                up different parts of content to make it appear or act in a certain way. The enclosing tags can make
+                content into a hyperlink to connect to another page, italicize words, and so on. For example, consider
+                the following line of text:</p>
+
+            <table class="table1">
+                <tbody>
+                    <tr>
+                        <td>My cat is very grumpy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a
+                paragraph <code>(<span><<span>p</span>></span>)</code> element:</p>
+
+            <table class="table1">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>
+                                &lt;p&gt;My cat is very grumpy.&lt;/p&gt;
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notecard">
+                <p>
+                    <strong>Note:</strong>
+                    Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For
+                    example:
+                    <span>
+                        &lt;title&gt;
+                    </span>
+                    tag could be written as
+                    <code>&lt;title&gt;</code>,
+                    <code>&lt;TITLE&gt;</code>,
+                    <code>&lt;Title&gt;</code>, or
+                    <code>&lt;tiTLE&gt;</code>
+                    etc, and it will work.
+                    However, it is best practice to write all tags
+                    in lowercase for consistency and readability.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="main-section" id="Anatomy_of_HTML_element">
+            <header id="heading">Anatomy of HTML element</header>
+            <p>Let's further explore the paragraph element from the previous section:</p>
+            <p>
+                <img alt
+                    src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png">
+            </p>
+
+            <p>The anatomy of our element is:
+            <ul class="lists">
+                <li><strong>The opening tag:</strong> This consists the name of the element (in this example, <em>p</em>
+                    for paragraph, wrapped in opening and closing angle brackets. The opening tag marks where the
+                    element begins or starts to take effect. In this example, it precedes the start of the paragraph
+                    text.</li>
+                <li><strong>The content:</strong> This is the content of the element. In this example, it is the
+                    paragraph text.</li>
+                <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes the
+                    forward slash before the element name. This marks where the element ends. Failing to include the
+                    closing tag is a common beginner error that can produce peculiar results.</li>
+            </ul>
+            The element is the opening tag, followed by content, followed by closing tag.
+            </p>
+
+            <h3 id="nesting_elements">
+                <a href="#nesting_elements" title="Permalink to Nesting elements">Nesting elements</a>
+            </h3>
+
+            <p>
+                Elements can be placed within other elements. This is called <em>nesting</em>. If we want to state that
+                our cat is <stron>very</strong> grumpy, we would wrap the word <em>very</em> in a &lt;strong&gt;
+                    element, which means that the word is to have strong(er) text formatting:
+            </p>
+
+            <table class="table1">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>
+                                &lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                There is a right and wrong way to do nesting. In the example above, we opened the p element first, then
+                opened the strong element. For proper nesting, we should close the strong element first, before closing
+                the p.
+
+                The following is an example of the <em>wrong</em> way to do nesting:
+            </p>
+            <table class="table1">
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>
+                                &lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                The <strong>tags have to open and close in a way that they are inside or outside one another.</strong>
+                With the kind of overlap in the example above, the browser has to guess at your intent. This kind of
+                guessing can result in unexpected results.
+            </p>
+
+            <h3 id="block_verses_inline_elements">
+                <a href="#block_verses_inline_elements" title="Permalink to Block versus inline elements">Block versus
+                    inline elements</a>
+            </h3>
+
+            <p>
+                There are two important categories of elements to know in HTML: block-level elements and inline
+                elements.
+            </p>
+
+            <ul>
+                <li>
+                    Block-level elements form a visible block on a page. A block-level element appears on a new line
+                    following the content that precedes it. Any content that follows a block-level element also appears
+                    on a new line. Block-level elements are usually structural elements on the page. For example, a
+                    block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A
+                    block-level element wouldn't be nested inside an inline element, but it might be nested inside
+                    another block-level element.Block-level elements form a visible block on a page. A block-level
+                    element appears on a new line following the content that precedes it. Any content that follows a
+                    block-level element also appears on a new line. Block-level elements are usually structural elements
+                    on the page. For example, a block-level element might represent headings, paragraphs, lists,
+                    navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but
+                    it might be nested inside another block-level element.
+                </li>
+                <li>
+                    Inline elements are contained within block-level elements, and surround only small parts of the
+                    document’s content (not entire paragraphs or groupings of content). An inline element will not cause
+                    a new line to appear in the document. It is typically used with text, for example an &lt;a&gt;
+                    element
+                    creates a hyperlink, and elements such as &lt;em&gt; or &lt;strong&gt; create emphasis
+                </li>
+            </ul>
+
+            <h3 id="empty_elements">
+                <a href="#empty_elements" title="Permalink to Empty elements">Empty elements</a>
+            </h3>
+
+            <p>
+                Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist
+                of a single tag, which is typically used to insert/embed something in the document. For example, the
+                &lt;img&gt; element embeds an image file onto a page. Empty elements are sometimes called <em>void
+                    elemnts.</em>
+            </p>
+
+        </section>
+
+        <section class="main-section" id="Attributes">
+            <header id="heading">Attributes</header>
+
+            <p>Elements can also have attributes. Attributes look like this:</p>
+
+            <img id="attr-img"
+                src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png">
+
+            <div>
+                Attributes contain extra information about the element that won't appear in the content. In this
+                example, the <strong style="background-color: lightgray;">class</strong> attribute is an identifying
+                name used to target the element with style information
+            </div>
+
+            <div>
+                An attribute should have:
+                <ul>
+                    <li>
+                        A space between it and the element name. (For an element with more than one attribute, the
+                        attributes should be separated by spaces too.)
+                    </li>
+                    <li>
+                        The attribute name, followed by an equal sign.
+                    </li>
+                    <li>
+                        An attribute value, wrapped with opening and closing quote marks.
+                    </li>
+                </ul>
+            </div>
+
+            <h3 id="adding_attributes_to_an_element">
+                <a href="#adding_attributes_to_an_element" title="Permalink to Adding attributes to an element">Adding
+                    attributes to an element</a>
+            </h3>
+
+            <div>
+                Another example of an element is <span style="background-color: lightgray;">&lt;a&gt;</span>. This
+                stands for <em>anchor.</em> An anchor can make the text it encloses
+                into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+                <ul>
+                    <li>
+                        <strong style="background-color: lightgray;">href</strong>: This attribute's value specifies the
+                        web address for the link. For example: <span
+                            style="background-color: lightgray;">href="https://www.mozilla.org/"</span>.
+                    </li>
+
+                    <li>
+                        <strong style="background-color: lightgray;">title</strong>: The <span
+                            style="background-color: lightgray;">title</span> attribute specifies extra information
+                        about the link, such as a description of the page that is being linked to. For example,
+                        <span style="background-color: lightgray;">title="The Mozilla homepage"</span>. This appears as
+                        a tooltip when a cursor hovers over the element.
+                    </li>
+
+                    <li>
+                        <strong style="background-color: lightgray;">target</strong>: The <span
+                            style="background-color: lightgray;">target</span> attribute specifies the browsing context
+                        used to display the link. For example, <span
+                            style="background-color: lightgray;">target="_blank"</span> will display the link in a new
+                        tab. If
+                        you want to display the linked content in the current tab, just omit this attribute.
+                    </li>
+                </ul>
+            </div>
+
+            <h3 id="boolean_attributes">
+                <a href="#boolean_attributes" title="Permalink to Boolean Attributes">Boolean attributes</a>
+            </h3>
+
+            <p>
+                Sometimes you will see attributes written without values. This is entirely acceptable. These are called
+                Boolean attributes. Boolean attributes can only have one value, which is generally the same as the
+                attribute name. For example, consider the disabled attribute, which you can assign to form input
+                elements. (You use this to disable the form input elements so the user can't make entries. The disabled
+                elements typically have a grayed-out appearance.) For example:
+            </p>
+
+            <div class="bgcolored">
+                &lt;input type="text" disabled="disabled"&gt;
+            </div>
+
+            <h3 id="Omitting_quotes_around_attribute_values">
+                <a href="#Omitting_quotes_around_attribute_values"
+                    title="Permalink to Omitting quotes around attribute values">Omitting quotes around attribute
+                    values</a>
+            </h3>
+
+            <p>
+                If you look at code for a lot of other sites, you might come across a number of strange markup styles,
+                including attribute values without quotes. This is permitted in certain circumstances, but it can also
+                break your markup in other circumstances. Always include the attribute quotes. It avoids such problems,
+                and results in more readable code.
+            </p>
+
+            <h3 id="Single_or_double_quotes">
+                <a href="#Single_or_double_quotes" title="Permalink to Single or double quotes">Single or double
+                    quotes</a>
+            </h3>
+
+            <p>
+                In this article you will also notice that the attributes are wrapped in double quotes. However, you
+                might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which
+                one you prefer. However, make sure you don't mix single quotes and double quotes. If you use one type of
+                quote, you can use the other type of quote <em>inside</em> your attribute values. To use quote marks
+                inside other quote marks of the same type (single or double quote), use <span style="font:bold">HTML
+                    entities</span>.
+            </p>
+
+
+
+        </section>
+
+        <section class="main-section" id="Anatomy_of_HTML_document">
+            <header id="heading">Anatomy of HTML document</header>
+
+            <p>
+                Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements
+                combine to form an entire HTML page:
+            </p>
+
+
+            <div class="bgcolored">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &emsp; &lt;head&gt;<br>
+                &emsp;&emsp; &lt;meta charset="utf-8"&gt; <br>
+                &emsp;&emsp; &lt;title&gt;My test page&lt;/title&gt; <br>
+                &emsp; &lt;/head&gt;<br>
+                &emsp; &lt;body&gt;<br>
+                &emsp;&emsp; &lt;p&gt;This is my page&lt;/p&gt;<br>
+                &emsp; &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+            </div>
+
+            <div>
+                Here we have
+                <ol>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;!DOCTYPE html&gt;</span>: The doctype. When HTML
+                        was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page
+                        had to follow to be considered good HTML. Doctypes used to look something different, but more
+                        recently, the doctype is a historical artifact that needs to be included for everything else to
+                        work right. <span style="background-color: lightgray;">&lt;!DOCTYPE html&gt;</span> is the
+                        shortest string of characters that counts as a valid doctype.
+                    </li>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;html&gt;&lt;/html&gt;</span>: This element wraps
+                        all the content on the page. It is sometimes known as the root element.
+                    </li>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;head&gt;&lt;/head&gt;</span>: This element acts
+                        as a container for everything you want to include on the HTML page, <span
+                            style="font: bold">that isn't the content</span> the page will show to viewers. This
+                        includes keywords and a page description that would appear in
+                        search results, CSS to style content, character set declarations, and more. You'll learn more
+                        about this in the next article of the series.
+                    </li>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;meta charset="utf-8"&gt;</span>: This element
+                        specifies the character set for your document to UTF-8, which includes most characters from the
+                        vast majority of human written languages. With this setting, the page can now handle any textual
+                        content it might contain. There is no reason not to set this, and it can help avoid some
+                        problems later.
+                    </li>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;title&gt;&lt;/title&gt;</span>: This sets the
+                        title of the page, which is the title that appears in the browser tab the page is loaded in. The
+                        page title is also used to describe the page when it is bookmarked.
+                    </li>
+                    <li>
+                        <span style="background-color: lightgray;">&lt;body&gt;&lt;/body&gt;</span>: This contains all
+                        the content that displays on the page, including text, images, videos, games, playable audio
+                        tracks, or whatever else.
+                    </li>
+
+                </ol>
+            </div>
+
+
+
+
+
+        </section>
+
+        <section class="main-section" id="Including_special_characters_in_HTML">
+            <header id="heading">Including special characters in HTML</header>
+            <div>
+                In HTML, the characters <span style="background-color: lightgray;">&lt;</span>, <span
+                    style="background-color: lightgray;">&gt;</span>, <span
+                    style="background-color: lightgray;">&quot;</span>, <span
+                    style="background-color: lightgray;">&apos;</span> and <span
+                    style="background-color: lightgray;">&amp;</span> are special characters. hey are parts of the HTML
+                syntax itself. So how do you include one of these special characters in your text? For example, if you
+                want to use an ampersand or less-than sign, and not have it interpreted as code.<br>
+                You do this with character references. These are special codes that represent characters, to be used in
+                these exact circumstances. Each character reference starts with an ampersand (&amp;), and ends with a
+                semicolon (&semi;).
+            </div>
+
+            <div>
+                <table id="special-characters">
+                    <tr>
+                        <th>Literal Character</th>
+                        <th>Character reference equivalent</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>&amp;lt&semi;</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>&amp;gt&semi;</td>
+                    </tr>
+                    <tr>
+                        <td>&quot;</td>
+                        <td>&amp;quot&semi;</td>
+                    </tr>
+                    <tr>
+                        <td>&apos;</td>
+                        <td>&amp;apos&semi;</td>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>&amp;amp&semi;</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="main-section" id="HTML_comments">
+            <header id="heading">HTML comments</header>
+
+            <div>
+                HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making
+                comments invisible to the user. The purpose of comments is to allow you to include notes in the code to
+                explain your logic or coding. This is very useful if you return to a code base after being away for long
+                enough that you don't completely remember it. Likewise, comments are invaluable as different people are
+                making changes and updates.
+
+                To write an HTML comment, wrap it in the special markers
+                <span style="background-color: lightgray;">&lt;&excl;&dash;&dash;</span> and <span
+                    style="background-color: lightgray;">&dash;&dash;&gt;</span>
+            </div>
+        </section>
+
+        <section class="main-section" id="Summary">
+            <header id="heading">Summary</header>
+            <div>
+                You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.
+
+                At this point, you should understand what HTML looks like, and how it works at a basic level. You should
+                also be able to write a few elements and attributes. The subsequent articles of this module go further
+                on some of the topics introduced here, as well as presenting other concepts of the language.
+            </div>
+        </section>
+
+    </main>
 
 </body>
 
